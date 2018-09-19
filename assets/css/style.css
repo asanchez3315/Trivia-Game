@@ -1,0 +1,32 @@
+
+.answer-btn,#start{
+  display:block;
+  width:75%;
+  padding:8px;
+  margin-left:10%;
+  border:none;
+  background:transparent;
+  font-size:30px;
+  color:white;
+  cursor:pointer
+
+
+  }
+
+  #start,button:hover{
+    border: solid 2px rgb(255, 145, 0);
+    background-color:rgba(0, 0, 0, 0.74);
+    color:white;
+    cursor:pointer
+    
+  }
+
+  .jumbotron{
+    margin-top:20px;
+    background-image:url("https://www.hoop-hype.net/wp-content/uploads/about-us.jpg");
+    background-size:cover
+  }
+
+  
+
+
