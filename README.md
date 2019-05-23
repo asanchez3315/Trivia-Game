@@ -23,7 +23,7 @@ Read the first question, try to answer it to the best of your ability, select an
  * CSS 
  * Github pages for deployment
 
- ## Play the Game
+ ## See it live
  https://asanchez3315.github.io/Trivia-Game/
 
 
