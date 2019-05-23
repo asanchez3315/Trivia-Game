@@ -9,22 +9,22 @@
   font-size:30px;
   color:white;
   cursor:pointer
-
-
   }
 
-  #start,button:hover{
+  button:hover,#start{
     border: solid 2px rgb(255, 145, 0);
     background-color:rgba(0, 0, 0, 0.74);
     color:white;
-    cursor:pointer
+    cursor:pointer;
+    background:transparent
     
   }
 
   .jumbotron{
     margin-top:20px;
     background-image:url("https://www.hoop-hype.net/wp-content/uploads/about-us.jpg");
-    background-size:cover
+    background-size:cover;
+    
   }
 
   

@@ -1,6 +1,6 @@
 
 var display = $('#quiz-area')
-var startingNumber = 30
+var startingNumber = 15
 
 $(document).on('click', '#reset', function (e) {
   game.refresh();
@@ -10,8 +10,10 @@ $(document).on("click", ".answer-btn", function (e) {
   game.click(e);
 });
 
-$(document).on("click", "#start", function (e) {
-  $("#subwrapper").prepend("<h2> Time Remaining: <span id='countdown-number'>30</span> Seconds</h2>")
+
+$(document).on("click", "#start", function prepend() {
+  $("#subwrapper").prepend(
+    "<h2> Time Remaining: <span id='countdown-number'>15</span> Seconds</h2>")
   game.loadQuestion();
 });
 
@@ -40,7 +42,7 @@ var questions = [{
   image: "https://media.giphy.com/media/xTiTnElw9C00WiLmhy/giphy.gif"
 },
 
- 
+
 {
   question: " Which Player is the closest comparison to Michael Jordan?",
   answers: ["Lebron James", "Clyde Drexler", "Kobe Bryant", "Tracy Mgrady"],
@@ -69,14 +71,20 @@ var game = {
     }
   },
 
-  loadQuestion: function () {
 
+  loadQuestion: function () {
     timer = setInterval(game.countdown, 1000);
     display.html("<h2>" + questions[this.currentQuestion].question + "</h2>");
     for (var i = 0; i < questions[this.currentQuestion].answers.length; i++) {
-      display.append('<button class="answer-btn" id ="button"' + 'data-name="' + questions[this.currentQuestion].answers[i] + '">' + questions[this.currentQuestion].answers[i] + '</button');
-    }
+      display.append('<button class="answer-btn" id ="button"' +
+        'data-name="' +
+        questions[this.currentQuestion].answers[i] +
+        '">'
+        + questions[this.currentQuestion].answers[i]
+        + '</button');
+      // console.log(this)
 
+    }
 
   },
 
@@ -104,7 +112,7 @@ var game = {
 
   results: function () {
     clearInterval(timer);
-    display.html('<h2> Lets see how you stacked up!</h2>');
+    display.html('<h2>Lets see how you stacked up!</h2>');
     display.append('<h3>Correct Answers: ' + game.right + '</h3>');
     display.append('<h3>Wrong Answers: ' + game.wrong + '</h3>');
     display.append('<h3>Unanswered: ' + (questions.length - (game.wrong + game.right)) + '</h3>');
@@ -145,7 +153,7 @@ var game = {
     display.append("<img src=" + questions[this.currentQuestion].image + '>')
 
     if (game.currentQuestion === questions.length - 1) {
-      setTimeout(game.results, 3000)
+      setTimeout(game.results, 5000)
 
     } else {
       setTimeout(game.nextQuestion, 5000)
